@@ -29,6 +29,56 @@ public class CalendarGridView extends ViewGroup {
   private int oldWidthMeasureSize;
   private int oldNumRows;
 
+  public int outer_widthl = 9;
+  public int outer_widthr = 9;
+  public int inner_widthl = 9;
+  public int inner_widthr = 9;
+
+  public int getOuter_widthl() {
+    return outer_widthl;
+  }
+
+  public void setOuter_widthl(int outer_widthl) {
+    this.outer_widthl = outer_widthl;
+    for (int i = 1; i < getChildCount(); i++) {
+      ((CalendarRowView) getChildAt(i)).setOuter_widthl(outer_widthl);
+    }
+
+  }
+
+  public int getOuter_widthr() {
+    return outer_widthr;
+  }
+
+  public void setOuter_widthr(int outer_widthr) {
+    this.outer_widthr = outer_widthr;
+    for (int i = 1; i < getChildCount(); i++) {
+      ((CalendarRowView) getChildAt(i)).setOuter_widthr(outer_widthr);
+    }
+  }
+
+  public int getInner_widthl() {
+    return inner_widthl;
+  }
+
+  public void setInner_widthl(int inner_widthl) {
+    this.inner_widthl = inner_widthl;
+    for (int i = 1; i < getChildCount(); i++) {
+      ((CalendarRowView) getChildAt(i)).setInner_widthl(inner_widthl);
+    }
+  }
+
+  public int getInner_widthr() {
+    return inner_widthr;
+  }
+
+  public void setInner_widthr(int inner_widthr) {
+    this.inner_widthr = inner_widthr;
+    for (int i = 1; i < getChildCount(); i++) {
+      ((CalendarRowView) getChildAt(i)).setInner_widthr(inner_widthr);
+    }
+  }
+
   public CalendarGridView(Context context, AttributeSet attrs) {
     super(context, attrs);
     dividerPaint.setColor(getResources().getColor(R.color.calendar_divider));
@@ -113,9 +163,9 @@ public class CalendarGridView extends ViewGroup {
     }
     long start = System.currentTimeMillis();
     oldWidthMeasureSize = widthMeasureSize;
-    int cellSize = widthMeasureSize / 7;
+    int cellSize = widthMeasureSize / 20;
     // Remove any extra pixels since /7 is unlikely to give whole nums.
-    widthMeasureSize = cellSize * 7;
+    widthMeasureSize = cellSize * 20;
     int totalHeight = 0;
     final int rowWidthSpec = makeMeasureSpec(widthMeasureSize, EXACTLY);
     final int rowHeightSpec = makeMeasureSpec(cellSize, EXACTLY);

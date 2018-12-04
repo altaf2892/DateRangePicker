@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gradle/4.10.1/
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/buildOutputCleanup/outputFiles.bin
+.gradle/vcs-1/
+.idea/caches/
+build/android-profile/profile-2018-12-03-13-53-50-221.json
+build/android-profile/profile-2018-12-03-13-53-50-221.rawproto

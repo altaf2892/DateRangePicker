@@ -161,6 +161,8 @@ public class CalendarCellView extends FrameLayout {
 
   public void setDayOfMonthTextView(TextView textView) {
     //textView.setTextSize(8);
+      textView.setHeight(20);
+      textView.setWidth(20);
     dayOfMonthTextView = textView;
   }
 

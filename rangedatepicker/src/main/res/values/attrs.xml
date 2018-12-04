@@ -8,6 +8,10 @@
     <attr name="tsquare_titleTextColor" format="color"/>
     <attr name="tsquare_displayHeader" format="boolean"/>
     <attr name="tsquare_headerTextColor" format="color"/>
+    <attr name="tsquare_outer_l" format="integer"/>
+    <attr name="tsquare_outer_r" format="integer"/>
+    <attr name="tsquare_inner_l" format="integer"/>
+    <attr name="tsquare_inner_r" format="integer"/>
   </declare-styleable>
 
   <declare-styleable name="calendar_cell">

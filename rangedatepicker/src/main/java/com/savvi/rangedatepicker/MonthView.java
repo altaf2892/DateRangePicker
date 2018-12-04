@@ -24,6 +24,48 @@ public class MonthView extends LinearLayout {
   private boolean isRtl;
   private Locale locale;
 
+  public int getOuter_widthl() {
+    return outer_widthl;
+  }
+
+  public void setOuter_widthl(int outer_widthl) {
+    this.outer_widthl = outer_widthl;
+    grid.setOuter_widthl(outer_widthl);
+  }
+
+  public int getOuter_widthr() {
+    return outer_widthr;
+  }
+
+  public void setOuter_widthr(int outer_widthr) {
+    this.outer_widthr = outer_widthr;
+    grid.setOuter_widthr(outer_widthr);
+  }
+
+  public int getInner_widthl() {
+    return inner_widthl;
+  }
+
+  public void setInner_widthl(int inner_widthl) {
+    this.inner_widthl = inner_widthl;
+    grid.setInner_widthl(inner_widthl);
+  }
+
+  public int getInner_widthr() {
+    return inner_widthr;
+  }
+
+  public void setInner_widthr(int inner_widthr) {
+    this.inner_widthr = inner_widthr;
+    grid.setInner_widthr(inner_widthr);
+  }
+
+  public int outer_widthl = 9;
+  public int outer_widthr = 9;
+  public int inner_widthl = 9;
+  public int inner_widthr = 9;
+
+
   ArrayList<Integer> deactivatedDates;
   public static MonthView create(ViewGroup parent, LayoutInflater inflater,
       DateFormat weekdayNameFormat, Listener listener, Calendar today, int dividerColor,
